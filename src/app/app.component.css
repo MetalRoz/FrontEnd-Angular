@@ -119,3 +119,10 @@ font-size: 25px;
   color: white;
 
  }
+
+ .probando {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: aqua;
+ }
