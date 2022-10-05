@@ -1,126 +1,126 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-  }
-
-  /* width */
-::-webkit-scrollbar {
-  width: 11px;
+  box-sizing: border-box;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px black;
-  border-radius: auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: black;
-  border-radius: 4px;
-}
-  
-  body {
-    overflow-x: hidden;
-  }
-  .wrapper {
-    width: 100vw;
-    height: 100vh;
-    background-color:#ffffff;
-    color:rgb(0, 0, 0);
-  }
-
-  .main {
-    margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-  }
-
-
-.p-tecnologia {
-  color: #dc3545;
-}
-
-.hab-text {
-    color: #dc3545;
-}
-
-#experiencia {
-margin-left: 0em;
-font-size: 25px;
-}
-
-.wordpress {
-  height: 70px;
-  width: 70px;
-}
-
-.html {
-  height: 70px;
-  width: 70px;
-}
-
-.css {
-  height: 70px;
-  width: 70px;
-}
-
-.gra-habilidades {
-  transition:all .5s ease-in-out;
-  width: 40%;
-}
-
-.gra-habilidades img {
-  width: 100%;
-}
-
-.javascript {
-  width: 70px;
-  height: 70px;
-  margin-top: 20px;
-}
-
-.container-img {
+.navbar {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 250px;
-  
+  justify-content: flex-end;
+  margin-right: 1em;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.login {
+  font-weight: 600  ;
+  font-family: 'Montserrat', sans-serif;
+  width: 80px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #3101ff;
+  border-color: #3101ff;
 }
 
-.hab-title {
-  width: 100%;
-  text-align: center;
-}
-
-.container-options {
-  margin-top: 35px;
+.descargar-cv {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  width: 140px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #3101ff;
+  border-color: #3101ff;
 }
 
 .imagenes-header {
-  display: flex;
-  height: 70px;
-  width: 114px;
- }
+ margin-right: 45em;
+ width: 114px;
+ height: 70px;
+}
 
- .educacion {
-  background-color: #dc3545;
-  color: white;
+.navtext {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: #000 !important;
+  margin-right: 1em;
+  background-color: #fff1fd;
+  border-radius: 50%;
+}
 
- }
+.nav-link {
+  color: #000;
+}
 
- .probando {
+.personalbox {
+margin-left: 15em;
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.personalbox h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.personalbox p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+} 
+
+.imagenwilson {
+margin-left: 10em;
+margin-top: 5em;
+width: 100%;
+height: 100%;
+}
+
+.tecnologias {
+  background-image: url("wave.png");
+  padding-top: 3em;
+}
+
+.tecnologias h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  justify-content: center;
   text-align: center;
-  color: aqua;
- }
+  }
+  
+
+.cajas {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 1em;
+  justify-content: space-between;
+  margin-top: 7.6em;
+  padding-bottom: 10em;
+}
+
+.caja1 img {
+  width: 80px;
+  height: 80px;
+}
+
+.caja2 img {
+  width: 80px;
+  height: 80px;
+}
+
+.caja3 img {
+  width: 80px;
+  height: 80px;
+}
+
+.caja4 img {
+  width: 80px;
+  height: 80px;
+}
+
+.cajas h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.cajas p {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2.5em;
+}

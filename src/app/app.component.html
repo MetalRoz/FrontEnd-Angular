@@ -1,97 +1,65 @@
 <header>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <div class="imagenes-header">
-        <a href="index.html" class="imagenes-header"> <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1662441043/APLogo-20-20.png" alt="arglog"></a>
-        <a href="index.html" class="imagenes-header"><img src="https://argentinaprograma.inti.gob.ar/theme/moove/pix/LogosInti.png" alt="inti-logo"></a>
-      </div>
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experiencia">Habilidades</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#edu">Educación</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Redes Sociales
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="https://www.facebook.com/wilsonmiguel2003" target="_blank"> Facebook <i class="fa-brands fa-facebook"></i></a></li>
-                <li><a class="dropdown-item" href="https://www.instagram.com/wilsonmg03" target="_blank">Instagram <i class="fa-brands fa-instagram"></i></a></li>
-                <li><a class="dropdown-item" href="#">WhatsApp <i class="fa-brands fa-whatsapp"></i></a></li>
-              </ul>
-            </li>
-          </ul>
-          <br>
-          <button class="btn btn-success" type="submit">Login</button>
 
-        </div>
-      </div>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://givoa.com.ar/wp-content/uploads/2020/05/INTI_Logo_2019-e1604498977818.png" alt="Logo" width="120" height="70" class="d-inline-block align-text-top">
+      </a>
+      <ul class="nav justify-content-end">
+        <li class="nav-item navtext">
+          <a class="nav-link active" aria-current="page" href="#">Linkedin</a>
+        </li>
+        <li class="nav-item navtext">
+          <a class="nav-link" href="">Instagram</a>
+        </li>
+        <li class="nav-item navtext">
+          <a class="nav-link" href="#">WhatsApp</a>
+        </li>
+        <button type="button" class="btn btn-primary login">Login</button>
+      </ul>
     </div>
   </nav>
 </header>
-<div class="wrapper">
-    <main class="main">
-      <div class="info-content">
-        <h1>Wilson Rosa</h1>
-        <p>¡Hola! Soy estudiante de programación y este es mi portfolio web. Aquí podrás ver mis habilidades como
-          desarrollador.</p>
-        <a download="" href="doc/CvWilson.pdf">
-          <button type="button" class="btn btn-danger">Descargar CV</button>
-        </a>
-      </div>
-      <img src="assets/img/wilson.jpg" alt="Wilson">
-    </main>
+
+<div class="personalbox">
+  <div>
+  <h1>
+    PORTFOLIO <br> WILSON ROSA
+  </h1>
+  <p>¡Hola! Soy estudiante de programación y este es mi portfolio web. Aquí podrás ver mis habilidades como
+    desarrollador.</p>
+    <a download="" href="assets/doc/CvWilson.pdf">
+      <button type="button" class="btn btn-primary descargar-cv">Descargar CV</button>
+    </a>
+</div>
+<div class="imagenwilson">
+  <img src="assets/img/wilson.png" width="160" height="354" alt="">
+</div>
+</div>
+<div class="tecnologias">
+  <h1>Tecnologías</h1>
+  <div class="cajas">
+    <div class="caja1">
+      <img src="assets/img/html.png" alt="">
+      <h5>HTML</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+    </div>
+    <div class="caja2">
+      <img src="assets/img/css.png" alt="">
+      <h5>CSS</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+    </div>
+    <div class="caja3">
+      <img src="assets/img/javascript.png" alt="">
+      <h5>JAVASCRIPT</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+    </div>
+    <div class="caja4">
+      <img src="assets/img/wordpress.png" alt="">
+      <H5>WORDPRESS</H5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+    </div>
+  </div>
+</div>
 
 
-    <div class="container">
-      <h3 class="hab-title"><span class="hab-text">Habilidades</span></h3>
-      <div class="container-options">
-      <p id="experiencia">Tengo experiencia con estas <span class="p-tecnologia">tecnologías:</span></p>
-      <div class="container-img">
-        <div><img class="wordpress" src="assets/img/wordpress.png" alt="wordress-logo"></div>
-        <div><img class="html" src="assets/img/html.png" alt="html-logo"></div>
-        <div><img class="css" src="assets/img/css.webp" alt="css-logo"></div>
-        <div><img class="javascript" src="assets/img/JavaScript.jpeg" alt="js-logo"></div>
-      </div>
-    </div>
-    <div class="gra-habilidades" ><img src="https://oralmedx.com/wp-content/uploads/2021/02/undraw_project_completed_w0oq-1.svg" alt="grafico-habilidades"> </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <h3 class="hab-title"><span class="hab-text">Educación</span></h3>
-      <div class="container-options">
-      <h5 id="edu" > <span class="educacion">Primario: </span> </h5>
-      <p>Estudié el primario en el Colegio Nido de Amor.</p>
-      <h5> <span class="educacion">Secundario: </span> </h5>
-      <p>Terminé la secundaria en el colegio provincial Antártida Argentina.</p>
-      <h5> <span class="educacion">Inglés: </span> </h5>
-      <p>Estudié inglés durante 7 meses en The English Center, Rep Dom.</p>
-      <h5> <span class="educacion">Primario: </span> </h5>
-      <h5> <span class="educacion">Primario: </span> </h5>
-    </div>
-    </div>
-
-   <div class="probando">
-    <h3>HOLA</h3>
-   </div>
