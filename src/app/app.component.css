@@ -4,77 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
 
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 1em;
-}
 
-.login {
-  font-weight: 600  ;
-  font-family: 'Montserrat', sans-serif;
-  width: 80px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: #3101ff;
-  border-color: #3101ff;
-}
 
-.descargar-cv {
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  width: 140px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: #3101ff;
-  border-color: #3101ff;
-}
-
-.imagenes-header {
- margin-right: 45em;
- width: 114px;
- height: 70px;
-}
-
-.navtext {
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  color: #000 !important;
-  margin-right: 1em;
-  background-color: #fff1fd;
-  border-radius: 50%;
-}
-
-.nav-link {
-  color: #000;
-}
-
-.personalbox {
-margin-left: 15em;
-position: relative;
-display: flex;
-align-items: center;
-}
-
-.personalbox h1{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-}
-
-.personalbox p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-} 
-
-.imagenwilson {
-margin-left: 10em;
-margin-top: 5em;
-width: 100%;
-height: 100%;
-}
-
-.tecnologias {
+/*.tecnologias {
   background-image: url("wave.png");
   padding-top: 3em;
-}
+}*/
 
 .tecnologias h1 {
   font-family: 'Montserrat', sans-serif;
@@ -124,3 +59,5 @@ height: 100%;
   font-family: 'Montserrat', sans-serif;
   margin-top: 2.5em;
 }
+
+

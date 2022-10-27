@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
+
+  .experiencias {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  
+  .experiencias h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 650;
+  }
+  
+  .experiencias span {
+    font-size: 28px;
+    color: #3101ff;
+    font-weight: 800;
+  }
+  
+  .pasantias {
+    width: 500px;
+    margin-left: 130px;
+  }
+  
+  .pasantia {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .pasantia h3{
+    font-size: 18px;
+  }
+  
+  .exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pas1 {
+    margin-left: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .wave_experiencia {
+    transform: rotate(180deg);
+  }
