@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
+
+.wave_experiencia {
+    transform: rotate(180deg);
+}
+
+.educaciones {
+display: flex;
+justify-content: center;
+margin-top: 80px;
+}
+
+.educaciones span {
+font-size: 28px;
+color: #3101ff;
+font-weight: 800;
+}
+        
+.educaciones h3 {
+font-size: 18px;
+}
+
+
+.edu {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+      
+.edu h1 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 650;
+}
+
+.educacion {
+width: 500px;
+margin-left: 130px;
+}
+
+.edus {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+
+.edus1 {
+margin-left: 2em;
+margin-bottom: 10px;
+}
+
+.edus h3 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+}
+
+.edus p {
+font-family: 'Montserrat', sans-serif;
+font-weight: 120;
+}
