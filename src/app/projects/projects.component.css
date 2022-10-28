@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
+
+.container-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
