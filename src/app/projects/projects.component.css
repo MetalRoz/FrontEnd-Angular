@@ -7,7 +7,9 @@
 .container-projects {
     display: flex;
     justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .proyectos {
@@ -26,4 +28,13 @@
 .card-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
+}
+
+.btn {
+    background-color: #3101ff;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.btn:hover {
+    background-color: #5732fa;
 }
