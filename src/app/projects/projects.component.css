@@ -39,3 +39,7 @@
 .btn:hover {
     background-color: #5732fa;
 }
+
+.card {
+    box-shadow: 3px 3px 3px black;
+}
