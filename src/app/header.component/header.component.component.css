@@ -22,14 +22,13 @@
   .navtext {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    color: #000 !important;
     margin-right: 1em;
     background-color: #fff1fd;
     border-radius: 50%;
   }
 
   .nav-link {
-    color: #000;
+    color: black;
   }
   
   .imagenes-header {
