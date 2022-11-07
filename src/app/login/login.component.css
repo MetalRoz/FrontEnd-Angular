@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Poppins:wght@100;800&display=swap');
+
+.gradient {
+background: rgb(149,132,255);
+background: linear-gradient(90deg, rgba(149,132,255,1) 35%, rgba(255,62,137,1) 100%);
+}
+
+.logtext, .logsubtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logtext h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    /*color: #715cf8;*/
+    color: white;
+}
+
+.logsubtext p{
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+/*color: #715cf8;*/
+color: white;
+}
+
+.log {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.usuario, .password {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+form {
+    margin-top: 80px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: #715cf8;
+    padding: 10px 50px 10px 50px;
+    border: none;
+    border-radius: 20px 20px 20px 20px;
+}
+
+button:hover {
+    background-color: #5a41fc;
+}
+
