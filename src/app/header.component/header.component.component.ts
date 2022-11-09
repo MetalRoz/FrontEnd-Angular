@@ -8,9 +8,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  Router(){
+    this.router.navigate(["login"])
   }
 
 }
