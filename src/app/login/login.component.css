@@ -49,6 +49,7 @@ color: white;
 
 .user, .pass {
     border-radius: 30px;
+    padding-left: 10px;
 }
 
 .log {
