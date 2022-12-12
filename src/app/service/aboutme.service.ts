@@ -16,6 +16,10 @@ export class AboutmeService {
     return this.httpClient.get<Aboutme[]>(this.aboutmeURL + 'lista');
   }
 
+  public detail(id: number): Observable<Aboutme> {
+    return this.httpClient.get<Aboutme>(this.aboutmeURL + `detail/${id}`);
+  }
+
   public update(id: number, aboutme: Aboutme): Observable<any> {
     return this.httpClient.put<any>(this.aboutmeURL + `update/${id}`, aboutme); 
   }

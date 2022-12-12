@@ -22,7 +22,35 @@ export class EditAboutmeComponent implements OnInit {
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.params['id'];
-    alert(id);
+    this.aboutmeService.detail(id).subscribe(
+      data => {
+        this.sobremi = data;
+      },
+      err => {
+        this.toastr.error(err.error.mensaje, 'Fail',{
+          timeOut: 3000, positionClass: 'toast-top-center',
+        });
+        this.router.navigate(['/']);
+      }
+    );
+  }
+
+  onUpdate(): void {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.aboutmeService.update(id, this.sobremi).subscribe(
+      data => {
+        this.toastr.success('Información actualizada', 'OK', {
+          timeOut: 3000, positionClass: 'toast-top-center'
+        });
+        this.router.navigate(['/']);
+      },
+      err => {
+        this.toastr.error(err.error.mensaje, 'Fail', {
+          timeOut: 3000, positionClass: 'toast-top-center',
+        });
+        this.router.navigate(['/']);
+      }
+    );
   }
 
 }
