@@ -1,8 +1,25 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
+
+ .fas {
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+ }
+
+
+.fasimg {
+  display: flex;
+  justify-content: center !important;
+}
+
 
 .descargar-cv {
     font-weight: 600;

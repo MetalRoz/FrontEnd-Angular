@@ -11,6 +11,13 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { EditAboutmeComponent } from './about-me.component/edit-aboutme.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+//external
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,11 +29,16 @@ import { HomePageComponent } from './home-page/home-page.component';
     SkillsComponent,
     ProjectsComponent,
     LoginComponent,
-    HomePageComponent
+    HomePageComponent,
+    EditAboutmeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   entryComponents: [LoginComponent],

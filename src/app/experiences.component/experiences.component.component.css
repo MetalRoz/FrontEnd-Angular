@@ -4,6 +4,13 @@
   
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
 
+.fas {
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+   }
+
   .experiencias {
     display: flex;
     justify-content: center;

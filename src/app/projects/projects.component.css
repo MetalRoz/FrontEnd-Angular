@@ -4,6 +4,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
 
+.fas {
+    padding-bottom: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+   }
+
+
 .container-projects {
     display: flex;
     justify-content: center;
