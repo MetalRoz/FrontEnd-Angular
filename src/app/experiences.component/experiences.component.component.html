@@ -4,36 +4,20 @@
   </path>
 </svg>
 
-<div class="experiencias">
-  <div class="exp">
-    <h1>EXPERIENCIAS</h1>
-  </div>
+<div class="newexp"><button type="button" class="btn btn-primary" routerLink="/agregar-exp">Nueva Experiencia</button></div>
+<div class="exp">
+  <h1>EXPERIENCIAS</h1>
+</div>
+<div class="experiencias"  *ngFor="let experiencia of experiencias" >
   <div class="pasantias">
-
     <div class="fas">
-    <i class="fas fa-plus"></i>
-    <i class="fas fa-edit"></i>
-    <i class="fas fa-trash"></i>
-    </div>
-
-    <div class="pasantia">
-      <span>01</span>
-      <div class="pas1">
-        <h3>Pasantía</h3>
-        <p>Realicé una pasantía en el año 2019 en el Colegio Provincial Antártida Argentina
-          donde me dedicada al desbloqueo, mantenimiento y reparación de las netbooks
-          del establecimiento.
-        </p>
+      <i class="fas fa-edit" routerLink="editar-exp/{{experiencia.id}}"></i>
+      <i class="fas fa-trash" (click)="borrar(experiencia.id)"></i>
       </div>
-    </div>
-    <br>
     <div class="pasantia">
-      <span>02</span>
       <div class="pas1">
-        <h3>Página web de Anime</h3>
-        <p>Realicé una página de anime en el año 2021 utilizando WordPress y alojada en BanaHosting.
-          En el apartado de proyectos encontrarán un vídeo de dicha página.
-        </p>
+        <h3>{{experiencia.titulo}}</h3>
+        <p>{{experiencia.descripcion}}</p>
       </div>
     </div>
   </div>

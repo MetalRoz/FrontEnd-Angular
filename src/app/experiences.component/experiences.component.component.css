@@ -1,58 +1,60 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
 
 .fas {
-    padding: 20px;
-    font-size: 20px;
-    display: flex;
-    justify-content: flex-end;
-   }
+  font-size: 20px;
+  padding: 20px;
+}
 
-  .experiencias {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-  }
-  
-  .experiencias h1{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-  }
-  
-  .experiencias span {
-    font-size: 28px;
-    color: #3101ff;
-    font-weight: 800;
-  }
-  
-  .pasantias {
-    width: 500px;
-    margin-left: 130px;
-  }
-  
-  .pasantia {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .pasantia h3{
-    font-size: 18px;
-  }
-  
-  .exp {
+.fa-edit, .fa-trash {
+  cursor: pointer;
+}
+
+.newexp button {
+    padding: 5px;
+    background-color: #3101ff;
+    border: none;
+}
+
+.newexp button:hover {
+    background-color: rgb(146, 29, 255);
+    border: none;
+}
+
+.newexp {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .pas1 {
-    margin-left: 2em;
-    margin-bottom: 10px;
-  }
+    padding-bottom: 50px;
+}
+
+.exp {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  margin-top:  40px;
+  margin-left: 200px;
+  position: absolute;
+}
+
+h1 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 800;
+}
+
+.experiencias {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 50rem;
+  position: relative;
+}
+
+
 
 .pas1 h3 {
 font-family: 'Montserrat', sans-serif;

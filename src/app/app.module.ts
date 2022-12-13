@@ -14,6 +14,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { EditAboutmeComponent } from './about-me.component/edit-aboutme.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EditarExpComponent } from './experiences.component/editar-exp.component';
+import { AgregarExpComponent } from './experiences.component/agregar-exp.component';
 
 //external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,7 +32,9 @@ import { ToastrModule } from 'ngx-toastr';
     ProjectsComponent,
     LoginComponent,
     HomePageComponent,
-    EditAboutmeComponent
+    EditAboutmeComponent,
+    EditarExpComponent,
+    AgregarExpComponent,
   ],
   imports: [
     BrowserModule,
