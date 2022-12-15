@@ -4,11 +4,11 @@ import { ExperienciaService } from '../service/experiencia.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-experiences-component',
-  templateUrl: './experiences.component.component.html',
-  styleUrls: ['./experiences.component.component.css']
+  selector: 'app-experiences',
+  templateUrl: './experiences.component.html',
+  styleUrls: ['./experiences.component.css']
 })
-export class ExperiencesComponentComponent implements OnInit {
+export class ExperiencesComponent implements OnInit {
 
   experiencias: Experiencia[] = [];
   Experiencia: any;

@@ -1,33 +1,18 @@
-<div class="tecnologias">
-  <h1>TECNOLOGÍAS</h1>
+<div class="titulo">
+    <h1>HABILIDADES</h1>
+</div>
 
-  <div class="fas">
-    <i class="fas fa-plus"></i>
-    <i class="fas fa-edit"></i>
-    <i class="fas fa-trash"></i>
-   </div>
+<button type="button" class="btn btn-danger" routerLink="/agregar-skill">Añadir Habilidad</button>
 
-  <div class="cajas">
-    <div class="caja1">
-      <img src="assets/img/html.png" alt="">
-      <h5>HTML</h5>
-      <p>Tengo conocimientos básicos sobre HTML.</p>
-    </div>
-    <div class="caja2">
-      <img src="assets/img/css.png" alt="">
-      <h5>CSS</h5>
-      <p>Tengo conocimientos básicos sobre CSS.</p>
-    </div>
-    <div class="caja3">
-      <img src="assets/img/javascript.png" alt="">
-      <h5>JAVASCRIPT</h5>
-      <p>Tengo conocimientos básicos sobre JavaScript</p>
-    </div>
-    <div class="caja4">
-      <img src="assets/img/wordpress.png" alt="">
-      <H5>WORDPRESS</H5>
-      <p>Tengo conocimiento medio sobre WordPress.</p>
+<div class="tarjetas">
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;" *ngFor="let habilidad of skill">
+  <div class="card-header">
+    <i class="fa-solid fa-pen-to-square" routerLink="editar-skill/{{habilidad.id}}"></i>
+    <i class="fa-solid fa-trash" (click)="borrar(habilidad.id)"></i>
+    <div class="card-body">
+      <h5 class="card-title"> <img src="{{habilidad.urlimagen}}" width="25px" height="25px" alt=""> {{habilidad.nombre}}</h5>
+      <p class="card-text">{{habilidad.descripcion}}</p>
     </div>
   </div>
-  <br><br><br><br><br>
+</div>
 </div>

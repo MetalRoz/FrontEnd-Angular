@@ -1,0 +1,18 @@
+<div class="titulo">
+    <h1>EXPERIENCIAS</h1>
+</div>
+
+<button type="button" class="btn btn-danger" routerLink="/agregar-exp">Añadir Experiencia</button>
+
+<div class="tarjetas">
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;" *ngFor="let experiencia of experiencias">
+  <div class="card-header">
+    <i class="fa-solid fa-pen-to-square" routerLink="editar-exp/{{experiencia.id}}"></i>
+    <i class="fa-solid fa-trash" (click)="borrar(experiencia.id)"></i>
+    <div class="card-body">
+      <h5 class="card-title">{{experiencia.titulo}}</h5>
+      <p class="card-text">{{experiencia.descripcion}}</p>
+    </div>
+  </div>
+</div>
+</div>

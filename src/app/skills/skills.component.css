@@ -1,67 +1,41 @@
-* {
-  box-sizing: border-box;
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    color: #47D16E;
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 200px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&display=swap');
-
-.fas {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
- }
-
-
-.tecnologias {
-  background-image: url('wave_tec.png');
+.tarjetas {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 80px;
 }
 
-.tecnologias h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  justify-content: center;
-  text-align: center;
+.card-header, .card-body, .card {
+    background-color: #1F1F21 !important;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 200px;
 }
 
-
-.cajas {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 1em;
-  justify-content: space-between;
-  margin-top: 7.6em;
-  padding-bottom: 10em;
+.fa-solid {
+    color: white;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
 }
 
-.caja1 img {
-  width: 80px;
-  height: 80px;
-}
-
-.caja2 img {
-  width: 80px;
-  height: 80px;
-}
-
-.caja3 img {
-  width: 80px;
-  height: 80px;
-}
-
-.caja4 img {
-  width: 80px;
-  height: 80px;
-}
-
-.cajas h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-.cajas p {
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 2.5em;
-  margin: 3rem;
+button {
+    margin-left: 60px;
 }

@@ -1,66 +1,19 @@
-<svg class="wave_experiencia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#fff1fd" fill-opacity="1"
-        d="M0,128L60,154.7C120,181,240,235,360,218.7C480,203,600,117,720,106.7C840,96,960,160,1080,181.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-    </path>
-</svg>
-
-<div class="educaciones">
-
-    <div class="edu">
-        <h1>EDUCACIÓN</h1>
-    </div>
-
-    <div class="educacion">
-
-        <div class="fas">
-            <i class="fas fa-plus"></i>
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash"></i>
-        </div>
-
-        <div class="edus">
-            <span>01</span>
-            <div class="edus1">
-                <h3>Primario</h3>
-                <p>Realicé la educación primaria en el Colegio Nido de Amor y Santo Cura de ARS
-                    en la República Dominicana.
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="edus">
-            <span>02</span>
-            <div class="edus1">
-                <h3>Secundario</h3>
-                <p>Realicé la educación secundaria en el Colegio Provincial Antártida Argentina
-                    en la modalidad de informática. Me egrese en el año 2019 con el mejor promedio del salón.
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="edus">
-            <span>03</span>
-            <div class="edus1">
-                <h3>Inglés</h3>
-                <p>Estudié Inglés durante 8 meses en The English Center en el año 2016
-                    en la República Dominicana.
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="edus">
-            <span>04</span>
-            <div class="edus1">
-                <h3>Curso Argentina Programa</h3>
-                <p>Actualmente me encuentro cursando en Argentina Programa para convertirme
-                    en un Full Stack Developer Jr.
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="titulo">
+    <h1>EDUCACIÓN</h1>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#fff1fd" fill-opacity="1"
-        d="M0,128L60,154.7C120,181,240,235,360,218.7C480,203,600,117,720,106.7C840,96,960,160,1080,181.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-    </path>
-</svg>
+
+<button type="button" class="btn btn-danger" routerLink="/agregar-education">Añadir Educacion</button>
+
+<div class="tarjetas">
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;" *ngFor="let educacion of educaciones">
+  <div class="card-header">
+    <i class="fa-solid fa-pen-to-square" routerLink="editar-education/{{educacion.id}}"></i>
+    <i class="fa-solid fa-trash" (click)="borrar(educacion.id)"></i>
+    <div class="card-body">
+      <h4 class="card-title">{{educacion.titulo}}</h4>
+      <h5 class="card-title">{{educacion.institucion}}</h5>
+      <p class="card-text">{{educacion.descripcion}}</p>
+    </div>
+  </div>
+</div>
+</div>

@@ -3,11 +3,11 @@ import { Aboutme } from '../models/aboutme';
 import { AboutmeService } from '../service/aboutme.service';
 
 @Component({
-  selector: 'app-about-me-component',
-  templateUrl: './about-me.component.component.html',
-  styleUrls: ['./about-me.component.component.css']
+  selector: 'app-about-me',
+  templateUrl: './about-me.component.html',
+  styleUrls: ['./about-me.component.css']
 })
-export class AboutMeComponentComponent implements OnInit {
+export class AboutMeComponent implements OnInit {
 
   sobremi: Aboutme[] = [];
   Aboutme: any;

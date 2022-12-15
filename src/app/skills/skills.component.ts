@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Skills } from '../models/skills';
+import { SkillsService } from '../service/skills.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-skills',
@@ -7,9 +10,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  skill: Skills[] = [];
+  Skills: any;
+  constructor(
+    private skillsService: SkillsService,
+    private toastr: ToastrService
+    ) { }
 
   ngOnInit(): void {
+    this.cargarSkills();
+  }
+
+  cargarSkills(): void {
+    this.skillsService.listahab().subscribe(
+      data => {
+        this.skill = data;
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  borrar(id: number) {
+    this.skillsService.delete(id).subscribe(
+      data => {
+        this.toastr.success('Habilidad Eliminada', 'OK', {
+          timeOut: 3000, positionClass: 'toast-top-center'
+        });
+        this.cargarSkills();
+      },
+      err => {
+        this.toastr.error(err.error.mensaje, 'Fail', {
+          timeOut: 3000,  positionClass: 'toast-top-center',
+        });
+      }
+    );
   }
 
 }
+

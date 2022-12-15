@@ -1,0 +1,12 @@
+<div class="container" *ngFor="let persona of sobremi">
+    <div class="imagen">
+        <img src="{{persona.urlimagen}}" class="img-thumbnail" alt="...">
+    </div>
+    <div class="sobremi">
+        <i class="fas fa-edit" routerLink="/edit-aboutme/{{persona.id}}"></i>
+        <h1>Soy <span>{{persona.nombre}}</span></h1>
+        <h3>{{persona.ocupacion}}</h3>
+        <p>{{persona.descripcion}}</p>
+        <button type="button" class="btn btn-success">Ver Proyectos</button>
+    </div>
+</div>

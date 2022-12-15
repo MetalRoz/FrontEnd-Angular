@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+
+.sobremi h1, h3{
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+    color: white;
+    text-align: center;
+}
+
+.sobremi span {
+    color: #47D16E;
+}
+
+.sobremi p {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+    max-width: 600px;
+}
+
+img {
+    border-radius: 50%;
+    width: 290px;
+    height: 300px;
+}
+
+button {
+    position: relative;
+    left: 40%;
+}
+
+.fas {
+    color: white;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+}
