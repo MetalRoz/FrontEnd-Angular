@@ -11,7 +11,7 @@ import { SkillsService } from '../service/skills.service';
 })
 export class EditarSkillComponent {
 
-  skill: Skills = null;
+  habilidades: Skills = null;
 
   constructor(
     
@@ -25,7 +25,7 @@ export class EditarSkillComponent {
     const id = this.activatedRoute.snapshot.params['id'];
     this.skillsService.detailhab(id).subscribe(
       data => {
-        this.skill = data;
+        this.habilidades = data;
       },
       err => {
         this.toastr.error(err.error.mensaje, 'Fail',{
@@ -38,7 +38,7 @@ export class EditarSkillComponent {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.skillsService.update(id, this.skill).subscribe(
+    this.skillsService.update(id, this.habilidades).subscribe(
       data => {
         this.toastr.success('Habilidad actualizada', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
