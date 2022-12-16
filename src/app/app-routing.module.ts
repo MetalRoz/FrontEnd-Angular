@@ -5,8 +5,11 @@ import { AgregarEducationComponent } from './education/agregar-education.compone
 import { EditarEducationComponent } from './education/editar-education.component';
 import { AgregarExpComponent } from './experiences/agregar-exp.component';
 import { EditarExpComponent } from './experiences/editar-exp.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
+import { AgregarProyectoComponent } from './projects/agregar-proyecto.component';
+import { EditarProyectoComponent } from './projects/editar-proyecto.component';
 import { AgregarSkillComponent } from './skills/agregar-skill.component';
 import { EditarSkillComponent } from './skills/editar-skill.component';
 
@@ -20,6 +23,8 @@ const routes: Routes = [
   { path:'editar-education/:id', component: EditarEducationComponent },
   { path:'editar-skill/:id', component: EditarSkillComponent },
   { path:'agregar-skill', component: AgregarSkillComponent },
+  { path:'agregar-proyecto', component: AgregarProyectoComponent },
+  { path:'editar-proyecto/:id', component: EditarProyectoComponent },
   { path:'**', redirectTo: '', pathMatch: 'full' }
 ];
 

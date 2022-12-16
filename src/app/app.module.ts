@@ -24,6 +24,8 @@ import { EditarEducationComponent } from './education/editar-education.component
 import { AgregarEducationComponent } from './education/agregar-education.component';
 import { EditarSkillComponent } from './skills/editar-skill.component';
 import { AgregarSkillComponent } from './skills/agregar-skill.component';
+import { EditarProyectoComponent } from './projects/editar-proyecto.component';
+import { AgregarProyectoComponent } from './projects/agregar-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { AgregarSkillComponent } from './skills/agregar-skill.component';
     AgregarEducationComponent,
     EditarSkillComponent,
     AgregarSkillComponent,
+    EditarProyectoComponent,
+    AgregarProyectoComponent,
   ],
   imports: [
     BrowserModule,
