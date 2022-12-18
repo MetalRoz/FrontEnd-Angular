@@ -11,6 +11,7 @@ export class AboutMeComponent implements OnInit {
 
   sobremi: Aboutme[] = [];
   Aboutme: any;
+  isediting = false;
   constructor(private aboutmeService: AboutmeService) { }
 
   ngOnInit(): void {

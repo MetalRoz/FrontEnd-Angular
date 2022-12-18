@@ -10,6 +10,8 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let id = localStorage.getItem("educacion");
+    if(id) window.location.href = id
   }
 
 }

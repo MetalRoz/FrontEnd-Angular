@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Aboutme } from '../models/aboutme';
@@ -11,6 +11,8 @@ import { AboutmeService } from '../service/aboutme.service';
 })
 export class EditAboutmeComponent implements OnInit {
 
+ @Input () person: any;
+ @Output() closeediting = new EventEmitter();
   sobremi: Aboutme = null;
 
   constructor(
@@ -21,23 +23,22 @@ export class EditAboutmeComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.aboutmeService.detail(id).subscribe(
-      data => {
-        this.sobremi = data;
-      },
-      err => {
-        this.toastr.error(err.error.mensaje, 'Fail',{
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
-        this.router.navigate(['/']);
-      }
-    );
+    // const id = this.activatedRoute.snapshot.params['id'];
+    // this.aboutmeService.detail(id).subscribe(
+    //   data => {
+    //     this.sobremi = data;
+    //   },
+    //   err => {
+    //     this.toastr.error(err.error.mensaje, 'Fail',{
+    //       timeOut: 3000, positionClass: 'toast-top-center',
+    //     });
+    //     this.router.navigate(['/']);
+    //   }
+    // );
   }
 
   onUpdate(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.aboutmeService.update(id, this.sobremi).subscribe(
+    this.aboutmeService.update(this.person.id, this.person).subscribe(
       data => {
         this.toastr.success('Información actualizada', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
@@ -51,6 +52,7 @@ export class EditAboutmeComponent implements OnInit {
         this.router.navigate(['/']);
       }
     );
+    this.closeediting.emit(false)
   }
 
 }

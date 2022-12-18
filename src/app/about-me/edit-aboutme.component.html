@@ -1,28 +1,30 @@
-<div class="container" *ngIf="sobremi">
+<div class="container">
     <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
+        <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre"
-                    [(ngModel)]="sobremi.nombre" required>
+                    [(ngModel)]="person.nombre" required>
                 </div>
                 <div class="form-group">
                     <label for="ocupacion">Ocupación</label>
                     <input type="text" class="form-control" id="ocupacion" name="ocupacion"
-                    [(ngModel)]="sobremi.ocupacion" required>
+                    [(ngModel)]="person.ocupacion" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" class="form-control" id="descripcion" contenteditable="true" name="descripcion"
-                    [(ngModel)]="sobremi.descripcion" required>
+                    <input type="text" class="form-control descripcion" id="descripcion" name="descripcion"
+                    [(ngModel)]="person.descripcion" required>
                 </div>
                 <div class="form-group">
                     <label for="urlimagen">URL de la imagen</label>
                     <input type="text" class="form-control" id="urlimagen" name="urlimagen"
-                    [(ngModel)]="sobremi.urlimagen" required>
+                    [(ngModel)]="person.urlimagen" required>
                 </div>
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button type="button" class="btn btn-outline-danger" (click)="closeediting.emit(false)" >Cancelar</button>
+
             </form>
         </div>
     </div>
