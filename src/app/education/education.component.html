@@ -1,13 +1,15 @@
 <div class="titulo">
-    <h1>EDUCACIÓN</h1>
+    <h1 id="educaciones">EDUCACIÓN</h1>
 </div>
 
 <button type="button" class="btn btn-danger" routerLink="/agregar-education">Añadir Educacion</button>
 
 <div class="tarjetas">
 <div class="card text-bg-secondary mb-3" style="max-width: 18rem;" *ngFor="let educacion of educaciones">
-  <div class="card-header">
-    <i class="fa-solid fa-pen-to-square" routerLink="editar-education/{{educacion.id}}"></i>
+  <div>
+    <app-editar-education [education]="educacion" (closeediting)="isediting = false" *ngIf="isediting"></app-editar-education>
+  <div class="card-header" *ngIf="!isediting">
+    <i class="fa-solid fa-pen-to-square" (click)="isediting = true"></i>
     <i class="fa-solid fa-trash" (click)="borrar(educacion.id)"></i>
     <div class="card-body">
       <h5 class="card-title">{{educacion.titulo}}</h5>
@@ -15,5 +17,6 @@
       <p class="card-text">{{educacion.descripcion}}</p>
     </div>
   </div>
+</div>
 </div>
 </div>

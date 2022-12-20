@@ -14,6 +14,7 @@ export class AgregarProyectoComponent {
   urlimagen = '';
   nombre = '';
   urlproyecto = '';
+  descripcion = '';
 
 constructor(
   private proyectosService: ProyectosService,
@@ -25,7 +26,7 @@ ngOnInit() {
 }
 
 onCreate(): void {
-  const proyecto = new Proyectos(this.urlimagen, this.nombre, this.urlproyecto);
+  const proyecto = new Proyectos(this.urlimagen, this.nombre, this.urlproyecto, this.descripcion);
   this.proyectosService.save(proyecto).subscribe(
     data => {
       this.toastr.success('Proyecto Creado', 'OK', {

@@ -13,10 +13,15 @@
                     [(ngModel)]="nombre" required>
                 </div>
                 <div class="form-group">
+                    <label for="descripcion">Descripcion del proyecto</label>
+                    <textarea name="descripcion" id="descripcion" rows="5" [(ngModel)]="descripcion" required></textarea>
+                </div>
+                <div class="form-group">
                     <label for="urlproyecto">URL del demo del proyecto</label>
                     <input type="text" class="form-control" id="urlproyecto" name="urlproyecto"
                     [(ngModel)]="urlproyecto" required>
                 </div>
+                <a href="#proyectos"><button type="button" class="btn btn-outline-danger">Cancelar</button></a>
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
             </form>
         </div>

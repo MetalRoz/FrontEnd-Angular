@@ -25,7 +25,6 @@ export class AgregarEducationComponent {
   }
   
   onCreate(): void {
-    localStorage.setItem("educacion", "#educaciones")
     const education = new Education(this.titulo, this.institucion, this.descripcion);
     this.educationService.save(education).subscribe(
       data => {

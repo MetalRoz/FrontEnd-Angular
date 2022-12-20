@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Education } from '../models/education';
@@ -11,6 +11,8 @@ import { EducationService } from '../service/education.service';
 })
 export class EditarEducationComponent {
 
+ @Input () education: any;
+ @Output() closeediting = new EventEmitter();
   titulo: Education = null;
 
   constructor(
@@ -22,23 +24,22 @@ export class EditarEducationComponent {
     ) { }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.educationService.detailedu(id).subscribe(
-      data => {
-        this.titulo = data;
-      },
-      err => {
-        this.toastr.error(err.error.mensaje, 'Fail',{
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
-        this.router.navigate(['/']);
-      }
-    );
+    // const id = this.activatedRoute.snapshot.params['id'];
+    // this.educationService.detailedu(id).subscribe(
+    //   data => {
+    //     this.titulo = data;
+    //   },
+    //   err => {
+    //     this.toastr.error(err.error.mensaje, 'Fail',{
+    //       timeOut: 3000, positionClass: 'toast-top-center',
+    //     });
+    //     this.router.navigate(['/']);
+    //   }
+    // );
   }
 
   onUpdate(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.educationService.update(id, this.titulo).subscribe(
+    this.educationService.update(this.education.id, this.education).subscribe(
       data => {
         this.toastr.success('Educación actualizada', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
@@ -52,6 +53,7 @@ export class EditarEducationComponent {
         this.router.navigate(['/']);
       }
     );
+    this.closeediting.emit(false)
   }
 
 }

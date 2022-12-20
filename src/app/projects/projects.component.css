@@ -17,6 +17,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 80px;
+    position: relative;
 }
 
 .card-header, .card-body, .card {

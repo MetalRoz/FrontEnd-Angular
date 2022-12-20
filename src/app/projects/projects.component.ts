@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
 
   proyecto: Proyectos[] = [];
   Proyectos: any;
+  isediting = false;
   constructor(
     private proyectosService: ProyectosService,
     private toastr: ToastrService

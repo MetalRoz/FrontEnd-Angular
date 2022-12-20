@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ExperienciaService } from '../service/experiencia.service';
 import { Experiencia } from '../models/experiencia';
 import { ToastrService } from 'ngx-toastr';

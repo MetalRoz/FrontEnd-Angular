@@ -12,6 +12,7 @@ export class SkillsComponent implements OnInit {
 
   skill: Skills[] = [];
   Skills: any;
+  isediting = false;
   constructor(
     private skillsService: SkillsService,
     private toastr: ToastrService

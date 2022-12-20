@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Experiencia } from '../models/experiencia';
@@ -11,6 +11,8 @@ import { ExperienciaService } from '../service/experiencia.service';
 })
 export class EditarExpComponent {
 
+ @Input () experience: any;
+ @Output() closeediting = new EventEmitter();
   titulo: Experiencia = null;
 
   constructor(
@@ -22,23 +24,22 @@ export class EditarExpComponent {
     ) { }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.experienciaService.detailexp(id).subscribe(
-      data => {
-        this.titulo = data;
-      },
-      err => {
-        this.toastr.error(err.error.mensaje, 'Fail',{
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
-        this.router.navigate(['/']);
-      }
-    );
+    // const id = this.activatedRoute.snapshot.params['id'];
+    // this.experienciaService.detailexp(id).subscribe(
+    //   data => {
+    //     this.titulo = data;
+    //   },
+    //   err => {
+    //     this.toastr.error(err.error.mensaje, 'Fail',{
+    //       timeOut: 3000, positionClass: 'toast-top-center',
+    //     });
+    //     this.router.navigate(['/']);
+    //   }
+    // );
   }
 
   onUpdate(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.experienciaService.update(id, this.titulo).subscribe(
+    this.experienciaService.update(this.experience.id, this.experience).subscribe(
       data => {
         this.toastr.success('Información actualizada', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
@@ -52,6 +53,7 @@ export class EditarExpComponent {
         this.router.navigate(['/']);
       }
     );
+    this.closeediting.emit(false)
   }
 
 }

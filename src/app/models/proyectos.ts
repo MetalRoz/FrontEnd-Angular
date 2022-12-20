@@ -3,11 +3,13 @@ export class Proyectos {
     nombre: string;
     urlimagen: string;
     urlproyecto: string;
+    descripcion: string;
 
-    constructor (nombre: string, urlimagen: string, urlproyecto: string){
+    constructor (nombre: string, urlimagen: string, urlproyecto: string, descripcion: string){
         this.nombre = nombre;
         this.urlimagen = urlimagen;
         this.urlproyecto = urlproyecto;
+        this.descripcion = descripcion;
 
     }
     

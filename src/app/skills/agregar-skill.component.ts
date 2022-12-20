@@ -13,6 +13,7 @@ export class AgregarSkillComponent {
   urlimagen = '';
   nombre = '';
   descripcion = '';
+  porcentaje: number = null;
 
 constructor(
   private skillsService: SkillsService,
@@ -24,7 +25,7 @@ ngOnInit() {
 }
 
 onCreate(): void {
-  const skill = new Skills(this.urlimagen, this.nombre, this.descripcion);
+  const skill = new Skills(this.urlimagen, this.nombre, this.descripcion, this.porcentaje);
   this.skillsService.save(skill).subscribe(
     data => {
       this.toastr.success('Habilidad Creada', 'OK', {

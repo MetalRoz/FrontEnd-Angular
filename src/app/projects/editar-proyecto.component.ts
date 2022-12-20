@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Proyectos } from '../models/proyectos';
@@ -10,6 +10,8 @@ import { ProyectosService } from '../service/proyectos.service';
   styleUrls: ['./editar-proyecto.component.css']
 })
 export class EditarProyectoComponent {
+  @Input () projects: any;
+  @Output() closeediting = new EventEmitter();
 
   project: Proyectos = null;
 
@@ -22,23 +24,22 @@ export class EditarProyectoComponent {
     ) { }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.proyectosService.detailpro(id).subscribe(
-      data => {
-        this.project = data;
-      },
-      err => {
-        this.toastr.error(err.error.mensaje, 'Fail',{
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
-        this.router.navigate(['/']);
-      }
-    );
+    // const id = this.activatedRoute.snapshot.params['id'];
+    // this.proyectosService.detailpro(id).subscribe(
+    //   data => {
+    //     this.project = data;
+    //   },
+    //   err => {
+    //     this.toastr.error(err.error.mensaje, 'Fail',{
+    //       timeOut: 3000, positionClass: 'toast-top-center',
+    //     });
+    //     this.router.navigate(['/']);
+    //   }
+    // );
   }
 
   onUpdate(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.proyectosService.update(id, this.project).subscribe(
+    this.proyectosService.update(this.projects.id, this.projects).subscribe(
       data => {
         this.toastr.success('Proyecto actualizado', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
@@ -52,6 +53,7 @@ export class EditarProyectoComponent {
         this.router.navigate(['/']);
       }
     );
+    this.closeediting.emit(false)
   }
 
 }

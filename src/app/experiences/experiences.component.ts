@@ -9,9 +9,10 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./experiences.component.css']
 })
 export class ExperiencesComponent implements OnInit {
-
+  
   experiencias: Experiencia[] = [];
   Experiencia: any;
+  isediting = false;
   constructor(
     private experienciaService: ExperienciaService,
     private toastr: ToastrService

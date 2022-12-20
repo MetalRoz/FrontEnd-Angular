@@ -1,22 +1,22 @@
-<div class="container" *ngIf="titulo">
-    <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
+<div class="container">
+    <div class="row">
+        <div class="col">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="titulo">Titulo</label>
                     <input type="text" class="form-control" id="titulo" name="titulo"
-                    [(ngModel)]="titulo.titulo" required>
+                    [(ngModel)]="education.titulo" required>
                 </div>
                 <div class="form-group">
                     <label for="institucion">Institución</label>
                     <input type="text" class="form-control" id="institucion" name="institucion"
-                    [(ngModel)]="titulo.institucion" required>
+                    [(ngModel)]="education.institucion" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" class="form-control" id="descripcion" name="descripcion"
-                    [(ngModel)]="titulo.descripcion" required>
+                    <textarea name="descripcion" id="descripcion" rows="5" [(ngModel)]="education.descripcion" required></textarea>
                 </div>
+                <button type="button" class="btn btn-outline-danger" (click)="closeediting.emit(false)" >Cancelar</button>
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
             </form>
         </div>

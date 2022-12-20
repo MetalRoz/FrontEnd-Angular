@@ -12,6 +12,7 @@ export class EducationComponent implements OnInit {
 
   educaciones: Education[] = [];
   Education: any;
+  isediting = false;
   constructor(
     private educationService: EducationService,
     private toastr: ToastrService
