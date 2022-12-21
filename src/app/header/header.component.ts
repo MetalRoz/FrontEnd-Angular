@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,26 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
 
+
 constructor(
+  public userService: UserService,
   private router:Router
 ) { }
 
 ngOnInit(): void {
+
 }
 
-Router(){
-  this.router.navigate(["login"])
+
+onClick() {
+  this.userService.logout()
+    .then(response => {
+      console.log("funciona");
+      this.router.navigate(['/']);
+    })
+    .catch(error => console.log(error));
 }
+
+
 
 }

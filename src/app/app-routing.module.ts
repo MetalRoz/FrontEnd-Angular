@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { AgregarProyectoComponent } from './projects/agregar-proyecto.component';
 import { EditarProyectoComponent } from './projects/editar-proyecto.component';
+import { RegisterComponent } from './register/register.component';
 import { AgregarSkillComponent } from './skills/agregar-skill.component';
 import { EditarSkillComponent } from './skills/editar-skill.component';
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path:'agregar-skill', component: AgregarSkillComponent },
   { path:'agregar-proyecto', component: AgregarProyectoComponent },
   { path:'editar-proyecto/:id', component: EditarProyectoComponent },
+  { path:'register', component: RegisterComponent },
   { path:'**', redirectTo: '', pathMatch: 'full' }
 ];
 

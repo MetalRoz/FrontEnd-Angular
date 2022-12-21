@@ -26,6 +26,11 @@ import { EditarSkillComponent } from './skills/editar-skill.component';
 import { AgregarSkillComponent } from './skills/agregar-skill.component';
 import { EditarProyectoComponent } from './projects/editar-proyecto.component';
 import { AgregarProyectoComponent } from './projects/agregar-proyecto.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,6 +52,7 @@ import { AgregarProyectoComponent } from './projects/agregar-proyecto.component'
     AgregarSkillComponent,
     EditarProyectoComponent,
     AgregarProyectoComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,10 @@ import { AgregarProyectoComponent } from './projects/agregar-proyecto.component'
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   entryComponents: [LoginComponent],

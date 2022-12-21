@@ -1,6 +1,5 @@
-<button class="btn btn-secondary" routerLink="">HOME</button>
-<h2>Login de usuario</h2>
-<form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+<h2>Registro de usuario</h2>
+<form [formGroup]="formReg" (ngSubmit)="onSubmit()">
     <div class="container">
         <label class="form-label">Email</label>
         <input type="text" class="form-control" formControlName="email" placeholder="ingresa tu email">
@@ -9,8 +8,7 @@
         <label class="form-label">Password</label>
         <input type="password" class="form-control" formControlName="password" placeholder="ingresa tu contraseña">
     </div>
-    <p routerLink="/register">Register</p>
     <div class="container">
-    <input type="submit" value="Iniciar sesión">
+    <input type="submit" value="Registrar">
 </div>
 </form>
