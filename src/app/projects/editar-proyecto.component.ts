@@ -14,6 +14,7 @@ export class EditarProyectoComponent {
   @Output() closeediting = new EventEmitter();
 
   project: Proyectos = null;
+  public isLogged = false;
 
   constructor(
     
@@ -24,6 +25,7 @@ export class EditarProyectoComponent {
     ) { }
 
   ngOnInit() {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
     // const id = this.activatedRoute.snapshot.params['id'];
     // this.proyectosService.detailpro(id).subscribe(
     //   data => {

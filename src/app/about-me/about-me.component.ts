@@ -12,10 +12,12 @@ export class AboutMeComponent implements OnInit {
   sobremi: Aboutme[] = [];
   Aboutme: any;
   isediting = false;
+  public isLogged = false;
   constructor(private aboutmeService: AboutmeService) { }
 
   ngOnInit(): void {
     this.cargarAboutme();
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
   }
 
   cargarAboutme(): void {

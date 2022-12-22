@@ -13,6 +13,8 @@ export class ProjectsComponent implements OnInit {
   proyecto: Proyectos[] = [];
   Proyectos: any;
   isediting = false;
+  public isLogged = false;
+
   constructor(
     private proyectosService: ProyectosService,
     private toastr: ToastrService
@@ -20,6 +22,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarProyectos();
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
   }
 
   cargarProyectos(): void {

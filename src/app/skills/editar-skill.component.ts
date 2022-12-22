@@ -14,6 +14,7 @@ export class EditarSkillComponent {
   @Output() closeediting = new EventEmitter();
 
   habilidades: Skills = null;
+  public isLogged = false;
 
   constructor(
     
@@ -24,6 +25,7 @@ export class EditarSkillComponent {
     ) { }
 
   ngOnInit() {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
     // const id = this.activatedRoute.snapshot.params['id'];
     // this.skillsService.detailhab(id).subscribe(
     //   data => {

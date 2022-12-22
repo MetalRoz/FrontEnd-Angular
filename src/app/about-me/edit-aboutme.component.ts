@@ -14,6 +14,7 @@ export class EditAboutmeComponent implements OnInit {
  @Input () person: any;
  @Output() closeediting = new EventEmitter();
   sobremi: Aboutme = null;
+  public isLogged = false;
 
   constructor(
     private aboutmeService: AboutmeService,
@@ -23,6 +24,7 @@ export class EditAboutmeComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
     // const id = this.activatedRoute.snapshot.params['id'];
     // this.aboutmeService.detail(id).subscribe(
     //   data => {

@@ -13,6 +13,8 @@ export class SkillsComponent implements OnInit {
   skill: Skills[] = [];
   Skills: any;
   isediting = false;
+  public isLogged = false;
+
   constructor(
     private skillsService: SkillsService,
     private toastr: ToastrService
@@ -20,6 +22,7 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarSkills();
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
   }
 
   cargarSkills(): void {

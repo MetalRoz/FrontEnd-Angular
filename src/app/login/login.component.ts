@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -10,30 +8,31 @@ import { UserService } from '../service/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  formLogin: FormGroup;
+  public alerta = false;
 
-  constructor(
-    public userService: UserService,
-    private router: Router
-  ) {
-    this.formLogin = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
-    })
+ public usuario = {
+    user: '',
+    password: ''
   }
+
+  validate = {
+    USER: 'wilson',
+    PASSWORD: 'wilson0102'
+  }
+
+  constructor(private router: Router){}
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    this.userService.login(this.formLogin.value)
-      .then(response => {
-        console.log(response);
-        this.router.navigate(['/']);
-      })
-      .catch(error => console.log(error));
+  Login(){
+    if(this.usuario.user == this.validate.USER && this.usuario.password == this.validate.PASSWORD) {
+      localStorage.setItem("isLog", JSON.stringify(true))
+      this.router.navigate(['/'])
+    }
+    else{
+      this.alerta = true;
+    }
   }
-  
-
 
 }

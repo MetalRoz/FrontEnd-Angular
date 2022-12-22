@@ -29,7 +29,6 @@ import { AgregarProyectoComponent } from './projects/agregar-proyecto.component'
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
-import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -52,7 +51,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AgregarSkillComponent,
     EditarProyectoComponent,
     AgregarProyectoComponent,
-    RegisterComponent,
   ],
   imports: [
     BrowserModule,

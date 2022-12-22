@@ -14,6 +14,7 @@ export class EditarExpComponent {
  @Input () experience: any;
  @Output() closeediting = new EventEmitter();
   titulo: Experiencia = null;
+  public isLogged = false;
 
   constructor(
     
@@ -24,6 +25,7 @@ export class EditarExpComponent {
     ) { }
 
   ngOnInit() {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
     // const id = this.activatedRoute.snapshot.params['id'];
     // this.experienciaService.detailexp(id).subscribe(
     //   data => {

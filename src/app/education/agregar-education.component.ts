@@ -14,6 +14,7 @@ export class AgregarEducationComponent {
   titulo = '';
   institucion = '';
   descripcion = '';
+  public isLogged = false;
   
   constructor(
     private educationService: EducationService,
@@ -22,6 +23,7 @@ export class AgregarEducationComponent {
     ) { }
   
   ngOnInit() {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
   }
   
   onCreate(): void {

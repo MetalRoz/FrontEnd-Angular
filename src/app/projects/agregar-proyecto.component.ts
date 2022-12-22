@@ -15,6 +15,7 @@ export class AgregarProyectoComponent {
   nombre = '';
   urlproyecto = '';
   descripcion = '';
+  public isLogged = false;
 
 constructor(
   private proyectosService: ProyectosService,
@@ -23,6 +24,7 @@ constructor(
   ) { }
 
 ngOnInit() {
+  this.isLogged = JSON.parse(localStorage.getItem("isLog"))
 }
 
 onCreate(): void {

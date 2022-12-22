@@ -14,6 +14,7 @@ export class EditarEducationComponent {
  @Input () education: any;
  @Output() closeediting = new EventEmitter();
   titulo: Education = null;
+  public isLogged = false;
 
   constructor(
     
@@ -24,6 +25,7 @@ export class EditarEducationComponent {
     ) { }
 
   ngOnInit() {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
     // const id = this.activatedRoute.snapshot.params['id'];
     // this.educationService.detailedu(id).subscribe(
     //   data => {

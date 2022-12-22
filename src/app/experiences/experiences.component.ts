@@ -13,6 +13,8 @@ export class ExperiencesComponent implements OnInit {
   experiencias: Experiencia[] = [];
   Experiencia: any;
   isediting = false;
+  public isLogged = false;
+
   constructor(
     private experienciaService: ExperienciaService,
     private toastr: ToastrService
@@ -20,6 +22,7 @@ export class ExperiencesComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarExperiencia();
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
   }
 
   cargarExperiencia(): void {

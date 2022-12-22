@@ -13,6 +13,8 @@ export class EducationComponent implements OnInit {
   educaciones: Education[] = [];
   Education: any;
   isediting = false;
+  public isLogged = false;
+
   constructor(
     private educationService: EducationService,
     private toastr: ToastrService
@@ -20,6 +22,7 @@ export class EducationComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarEducation();
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
   }
 
   cargarEducation(): void {

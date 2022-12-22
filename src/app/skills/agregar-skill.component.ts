@@ -14,6 +14,7 @@ export class AgregarSkillComponent {
   nombre = '';
   descripcion = '';
   porcentaje: number = null;
+  public isLogged = false;
 
 constructor(
   private skillsService: SkillsService,
@@ -22,6 +23,7 @@ constructor(
   ) { }
 
 ngOnInit() {
+  this.isLogged = JSON.parse(localStorage.getItem("isLog"))
 }
 
 onCreate(): void {

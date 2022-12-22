@@ -14,6 +14,7 @@ export class AgregarExpComponent {
 
 titulo = '';
 descripcion = '';
+public isLogged = false;
 
 constructor(
   private experienciaService: ExperienciaService,
@@ -22,6 +23,7 @@ constructor(
   ) { }
 
 ngOnInit() {
+  this.isLogged = JSON.parse(localStorage.getItem("isLog"))
 }
 
 onCreate(): void {

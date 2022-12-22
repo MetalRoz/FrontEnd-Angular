@@ -1,35 +1,23 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../service/user.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
+  public isLogged = false;
 
+  constructor() { }
 
-constructor(
-  public userService: UserService,
-  private router:Router
-) { }
+  ngOnInit(): void {
+    this.isLogged = JSON.parse(localStorage.getItem("isLog"))
+  }
 
-ngOnInit(): void {
-
-}
-
-
-onClick() {
-  this.userService.logout()
-    .then(response => {
-      console.log("funciona");
-      this.router.navigate(['/']);
-    })
-    .catch(error => console.log(error));
-}
-
-
+  logout(){
+    localStorage.removeItem("isLog")
+    window.location.reload()
+  }
 
 }
