@@ -21,3 +21,7 @@
     color: white;
     margin-right: 10px;
 }
+
+input {
+    padding: 5px;
+}
