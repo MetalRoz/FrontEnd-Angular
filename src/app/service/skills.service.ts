@@ -8,7 +8,7 @@ import { Skills } from '../models/skills';
 })
 export class SkillsService {
 
-  skillURL = 'http://localhost:8080/habilidades/';
+  skillURL = 'https://spotless-ants-production.up.railway.app/habilidades/';
 
   constructor(private httpClient: HttpClient) { }
 

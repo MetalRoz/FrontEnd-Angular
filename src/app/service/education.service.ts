@@ -8,7 +8,7 @@ import { Education } from '../models/education';
 })
 export class EducationService {
 
-  educationURL = 'http://localhost:8080/educacion/';
+  educationURL = 'https://spotless-ants-production.up.railway.app/educacion/';
 
   constructor(private httpClient: HttpClient) { }
 

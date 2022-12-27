@@ -8,7 +8,7 @@ import { Aboutme } from '../models/aboutme';
 })
 export class AboutmeService {
 
-  aboutmeURL = 'http://localhost:8080/aboutme/';
+  aboutmeURL = 'https://spotless-ants-production.up.railway.app/aboutme/';
 
   constructor(private httpClient: HttpClient) { }
 
