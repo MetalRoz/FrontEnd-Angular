@@ -8,7 +8,7 @@ import { Experiencia } from '../models/experiencia';
 })
 export class ExperienciaService {
 
-  experienciaURL = 'https://spotless-ants-production.up.railway.app/experiencia/';
+  experienciaURL = 'https://crud-portfolio-ap.onrender.com/experiencia/';
 
   constructor(private httpClient: HttpClient) { }
 

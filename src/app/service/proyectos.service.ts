@@ -8,7 +8,7 @@ import { Proyectos } from '../models/proyectos';
 })
 export class ProyectosService {
 
-  proyectosURL = 'https://spotless-ants-production.up.railway.app/proyectos/';
+  proyectosURL = 'https://crud-portfolio-ap.onrender.com/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 

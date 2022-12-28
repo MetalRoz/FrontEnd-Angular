@@ -8,7 +8,7 @@ import { Aboutme } from '../models/aboutme';
 })
 export class AboutmeService {
 
-  aboutmeURL = 'https://spotless-ants-production.up.railway.app/aboutme/';
+  aboutmeURL = 'https://crud-portfolio-ap.onrender.com/aboutme/';
 
   constructor(private httpClient: HttpClient) { }
 
