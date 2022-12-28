@@ -8,7 +8,7 @@ import { Skills } from '../models/skills';
 })
 export class SkillsService {
 
-  skillURL = 'https://crud-portfolio-ap.onrender.com/habilidades/';
+  skillURL = 'https://spotless-ants-production.up.railway.app/habilidades/';
 
   constructor(private httpClient: HttpClient) { }
 
