@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    justify-content: space-between;
 }
 
 .sobremi h1, h3{
@@ -28,12 +26,15 @@
     line-height: 24px;
     color: white;
     max-width: 600px;
+    text-align: center;
+}
+
+.imagen {
+    max-width: 300px;
 }
 
 img {
     border-radius: 50%;
-    width: 290px;
-    height: 300px;
 }
 
 button {
